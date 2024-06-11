@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "imagen": "https://example.com/imagenes/manzana.jpg",
+        "nombre": "Manzana",
+        "importe": 1.50,
+        "stock": 100
+    },
+    {
+        "id": 2,
+        "imagen": "https://example.com/imagenes/platano.jpg",
+        "nombre": "Plátano",
+        "importe": 1.20,
+        "stock": 150
+    },
+    {
+        "id": 3,
+        "imagen": "https://example.com/imagenes/naranja.jpg",
+        "nombre": "Naranja",
+        "importe": 1.00,
+        "stock": 200
+    },
+    {
+        "id": 4,
+        "imagen": "https://example.com/imagenes/uva.jpg",
+        "nombre": "Uva",
+        "importe": 2.50,
+        "stock": 80
+    },
+    {
+        "id": 5,
+        "imagen": "https://example.com/imagenes/piña.jpg",
+        "nombre": "Piña",
+        "importe": 3.00,
+        "stock": 50
+    }
+]

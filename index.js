@@ -8,6 +8,15 @@ const path = require('path'); //llamado dinamico
 // app.use(express.static('public')); //llamado estatico
 app.use(express.static(path.join(__dirname, "public")));// llamado dinamico con path
 
+app.use(express.urlencoded({extended: true})); // interprete de formularios
+app.use(express.json()); //para recibir el body de un POST (interpreta)
+
+// usando routs productos
+// const productosRouter = require("./routes/productos.router");
+// app.use('/productos', productosRouter); //esta linea pisa a la app.use que sigue, que es la raiz del proyecto, por eso usamos un prefijo: '/productos'
+// *****  OTRA FORMA SIN USAR UNA VARIABLE ****
+app.use('/productos', require("./routes/productos.router"));
+
 // EL ORDEN DEPENDE, PORQUE SI ESTA LINEA ESTUBIESE PRIMERO QUE STATIC SERIA LEIDA
 app.get("/", (req, res) => { // cuando entre una consulta por / responde..
     res.send('Hola express');
@@ -18,7 +27,7 @@ app.get("/factura", (req, res) => {
     res.sendFile(path.join(__dirname, 'private', 'factura.html'));
     //res.sendFile(path.join(__dirname, 'private', 'Mattii.pdf'));
 });
-
+ 
 // ruta para el json frutas
 app.get("/frutas", (req, res) => {
     res.sendFile(path.join(__dirname, 'frutas.json'));
